@@ -4,6 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "private": true,
+  "readme": "README.md",
   "scripts": {
     "start": "nodemon ."
   },
