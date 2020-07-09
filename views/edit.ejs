@@ -1,0 +1,29 @@
+<% layout('ly') -%>
+
+<main class="container">
+    <div class="row">
+        <div class="offset-md-2 col-md-8">
+            <form action="/edit?id=<%= data.codigo_usr %>" method="post">
+                <div class="form-group">
+                    <label for="nombre">Nombre: </label>
+                    <input type="text" name="nombre" id="nombre" class="form-control" placeholder="Nombre" required value="<%= data.nombre_usr %>">
+                </div>
+                <div class="form-group">
+                    <label for="username">Nombre de Usuario: </label>
+                    <input type="text" name="username" id="username" class="form-control" placeholder="Nombre de Usuario" required value="<%= data.nombre_usuario_usr %>">
+                </div>
+                <div class="form-group">
+                    <label for="correo">Correo Electronico: </label>
+                    <input type="email" name="correo" id="correo" class="form-control" placeholder="ejm@ejm.com" required value="<%= data.correo_usr %>">
+                </div>
+                <div class="form-group">
+                    <label for="contrasenia">Contraseña: </label>
+                    <input type="password" name="contrasenia" id="contrasenia" class="form-control" placeholder="*********" required value="<%= data.contrasenia_usr %>">
+                </div>
+                <div style="text-align: center;">
+                    <input type="submit" value="Actualizar" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Se actualizara el registro">
+                </div>
+            </form>
+        </div>
+    </div>
+</main>

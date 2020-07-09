@@ -1,0 +1,20 @@
+footer, header {
+    background-color: black;
+    color: white;
+}
+.footer {
+    position: absolute;
+    bottom: 0;
+}
+button {
+    outline: none;
+}
+i {
+    color: black;
+}
+tbody {
+    font-size: 1.2em;
+}
+a:focus {
+    background-color: #e5e5e5;
+}
