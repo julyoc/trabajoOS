@@ -1,10 +1,16 @@
 footer, header {
     background-color: black;
     color: white;
+    position: fixed;
+    z-index: 99;
 }
 .footer {
-    position: absolute;
     bottom: 0;
+}
+main {
+    height: auto;
+    padding-top: 2.25em;
+    padding-bottom: 1.75em;
 }
 button {
     outline: none;
@@ -15,6 +21,12 @@ i {
 tbody {
     font-size: 1.2em;
 }
-a:focus {
-    background-color: #e5e5e5;
+h3 a {
+    color: white;
+}
+.contbtn {
+    font-weight: bold;
+}
+table {
+    text-align: right;
 }
