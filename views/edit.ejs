@@ -24,20 +24,7 @@
                 <div style="text-align: center;">
                     <div id="aler"></div>
                     <input type="button" onclick="update()" value="Actualizar" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Se actualizara el registro">
-                    <script>
-                        var aler = document.getElementById('aler');
-
-                        var update = function update() {
-                            aler.innerHTML = `
-                            <div class="alert alert-warning fade show" role="alert">
-                                Los datos se actualizaran. <input type="submit" value="Continuar" class="btn btn-link contbtn">
-                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            `;
-                        };
-                    </script>
+                    <script src="/public/js/edit.js"></script>
                 </div>
             </form>
         </div>

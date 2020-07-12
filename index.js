@@ -100,7 +100,7 @@ app.post('/edit', (req, res) => {
     });
 });
 
-console.log(`app runs in: \x1b[33m${platform()}, \x1b[33m${arch()}\x1b[0m.
+console.log(`app runs in: \x1b[33m${platform()}\x1b[0m, \x1b[33m${arch()}\x1b[0m.
 cpu: \x1b[33m${cpus()[0].model}\x1b[0m.
 memory: \x1b[33m${Math.round(totalmem()/Math.pow(2, 30))}gb\x1b[0m.`);
 
