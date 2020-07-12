@@ -2,7 +2,7 @@ require('dotenv').config();
 
 const express = require('express');
 const engine = require('ejs-locals');
-const { networkInterfaces } = require('os');
+const { networkInterfaces, cpus, arch, platform, totalmem } = require('os');
 const bodyParser = require('body-parser');
 const mariadb = require('mariadb');
 
@@ -11,9 +11,9 @@ const pool = mariadb.createPool({
     host: DB_HOST, 
     user: DB_USER, 
     password: DB_PASS,
-    database: DB_NAME
+    database: DB_NAME,
+    connectionLimit: 100
 });
-
 
 const PORT = Number(process.env.PORT) || 4000;
 const app = express();
@@ -99,6 +99,10 @@ app.post('/edit', (req, res) => {
         throw err;
     });
 });
+
+console.log(`app runs in: \x1b[33m${platform()}, \x1b[33m${arch()}\x1b[0m.
+cpu: \x1b[33m${cpus()[0].model}\x1b[0m.
+memory: \x1b[33m${Math.round(totalmem()/Math.pow(2, 30))}gb\x1b[0m.`);
 
 for (const key in networkInterfaces()) {
     if (networkInterfaces().hasOwnProperty(key)) {
